@@ -3,6 +3,10 @@ from bs4 import BeautifulSoup
 
 
 def scrape_web(url):
+
+    # Save all jackets with price in dict
+    jackets_dict = {}
+
     # Send an HTTP request to the webpage and get the HTML content
     response = requests.get(url)
     html_content = response.content
@@ -21,5 +25,9 @@ def scrape_web(url):
         price = listing.find('span', class_='price').text.strip()
 
         # Print the information of the listing
-        print(title)
-        print(price)
+        print(f"{title} {price}")
+
+        jackets_dict[title] = price
+
+    return jackets_dict
+

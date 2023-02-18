@@ -1,0 +1,2 @@
+ERROR:root:'dict' object has no attribute 'key' 2023-02-18 15:49:21.761835
+ERROR:root:Invalid URL 'None': No scheme supplied. Perhaps you meant https://None? 2023-02-18 21:43:30.680883

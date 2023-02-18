@@ -2,7 +2,9 @@
 # Read URL from configuration file
 import re
 
+
 def read_url(url_number):
+
     # Open the file and read the contents
     with open('.\config\config.txt', 'r') as file:
         contents = file.read()
