@@ -11,13 +11,13 @@ def send_data_to_sql(jackets_dict):
 
     # Create a table
     cursor.execute(
-        "CREATE TABLE IF NOT EXISTS striukes (id INT AUTO_INCREMENT PRIMARY KEY, tipas VARCHAR(255), kaina VARCHAR(45))")
+        "CREATE TABLE IF NOT EXISTS jackets (id INT AUTO_INCREMENT PRIMARY KEY, type VARCHAR(255), price VARCHAR(45))")
 
     # Insert the data into the tabl
-    for tipas_striukes, kaina_striukes in jackets_dict.items():
+    for jacket_type, jacket_price in jackets_dict.items():
 
-        sql = "INSERT INTO striukes (tipas, kaina) VALUES (%s, %s)"
-        val = (tipas_striukes, kaina_striukes)
+        sql = "INSERT INTO jackets (type, price) VALUES (%s, %s)"
+        val = (jacket_type, jacket_price)
         cursor.execute(sql, val)
 
     # Commit the changes

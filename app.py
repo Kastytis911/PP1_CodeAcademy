@@ -17,7 +17,7 @@ try:
     # In config.txt file are some urls. Insert number in read_config.read_url(<number>)
     # 0 - first url is for men jacket from Audimas shop
     # 1 - second url is for woman jacket Audimas shop
-    Selected_url = read_config.read_url(0)
+    Selected_url = read_config.read_url(1)
 
     # Start scraper, using url selected before
     jackets_dict = scraper.scrape_web(Selected_url)
